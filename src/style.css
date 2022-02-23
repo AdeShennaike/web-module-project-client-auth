@@ -10,3 +10,40 @@ html, body, #root {
 label {
     display:block;
 }
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.header a{
+    text-decoration: none;
+    color:white;
+    margin: 1.2rem;
+    padding-top: .5rem;
+    border: black solid 1px;
+    background-color: black;
+    justify-content: space-between;
+    width: 10%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+}
+
+.input {
+    /* background-color: black; */
+}
+
+.button {
+    background-color: black;
+    color: #ffff;
+    width: 16.7%;
+    margin-top: .8rem;
+}

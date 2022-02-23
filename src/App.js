@@ -1,35 +1,20 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import './style.css';
+import { BrowserRouter as Router, Route, Routes, Switch} from 'react-router-dom';
+import Login from './component/login';
+import Header from './component/header';
+import Friendlist from './component/freindsList';
 
 function App() {
   return (
     <div className="App">
-      <header className = 'header'>
-        <h1>FRIENDS DATABASE</h1>
-        <nav>
-          <a>LOGIN.</a>
-          <a>FRIENDLIST.</a>
-          <a>ADDFRIEND.</a>
-          <a>LOGOUT</a>
-        </nav>
-      </header>
-      <h2> LOGIN </h2>
-      <form>
-        <label htmlFor='username'> Username </label>
-        <input 
-          className = 'input'
-          labelHtml = 'name'
-          type = 'text'
-          />
-        <label htmlFor='password'> Password </label>
-        <input
-          className = 'input'
-          labelHtml = 'name'
-          type = 'text'
-        />
-        <button> SUBMIT </button>
-      </form>
+        <Header/>
+        <Switch>
+          <Route path = '/friends' component = {Friendlist}/>
+          <Route path = '/login' component = {Login}/>
+          <Route path = '/' component = {Login}/>
+          <Route path = ''/>
+        </Switch>
     </div>
   );
 }
